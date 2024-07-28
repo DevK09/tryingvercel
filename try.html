@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Charming Town!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: #4a86e8;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .welcome-sign {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .town-features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .feature {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .feature:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-sign">
+            <h1>Welcome to Charmville!</h1>
+            <p>Where every day feels like a vacation</p>
+        </div>
+        <div class="town-features">
+            <div class="feature" title="Beautiful Nature">🌳</div>
+            <div class="feature" title="Friendly Community">👥</div>
+            <div class="feature" title="Delicious Local Cuisine">🍽️</div>
+        </div>
+        <p>Explore our town's natural beauty, meet our friendly locals, and taste our amazing food!</p>
+    </div>
+    <script>
+        document.querySelectorAll('.feature').forEach(feature => {
+            feature.addEventListener('mouseover', () => {
+                alert(`Enjoy our ${feature.getAttribute('title')}!`);
+            });
+        });
+    </script>
+</body>
+</html>
